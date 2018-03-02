@@ -4,12 +4,9 @@
 
 # Example
 
-import time
 from dpea.utilities import MixPanel
 
 INFINITY_MIRROR_TOKEN = "yourMixPanelProjectToken"
-
-start = time.time()
 
 #
 # Sends a "Color Selected" event with a color property of 'blue'
@@ -32,8 +29,4 @@ demoEvent.setEventName("Demo Mode");
 demoEvent.addProperty("duration", 232);
 
 demoEvent.sendEvent()
-
-end = time.time()
-
-print(int(end - start));
 
