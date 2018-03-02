@@ -23,6 +23,6 @@ class MixPanel(object):
         event['properties'] = self.properties
 
         data = json.dumps(event)
-        url = self.MIXPANEL_URL + base64.b64encode(data);
+        url = self.MIXPANEL_URL + base64.b64encode(data.encode("utf-8")).decode("utf-8");
         requests.post(url)
 
